@@ -1,18 +1,9 @@
 <section class="pricing py-5">
   <div class="container">
     <div class="row">
-       <div class="col-lg-4"> 
-      <app-free name="Free" Amount="$0" User="Single User" Storage="5GB Storage"
-      Subdomain="Free subdomain" ></app-free>
-     </div> 
-     <div class="col-lg-4">
-      <app-free name="plus" Amount="$9" User="5 User" Storage="50GB Storage"
-      Subdomain="Free subdomain"></app-free>
+     <div *ngFor="let priceCard of priceCards" class="col-lg-4"> 
+          <app-card [priceCardData]="priceCard"></app-card>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-4">
-      <app-free name="Pro" Amount=$49 User="Unlimited User" Storage="150GB Storage"
-      Subdomain="Unlimited Free subdomain"></app-free>
-    </div>    
-    </div>
-  </div>
 </section>
